@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/msanjeevi/web-asnible-project.git'
+                git branch: 'master', url: 'https://github.com/Narendraakula133/pipelines.git'
             }
         }
     
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Replace EC2_PUBLIC_IP
-                    def output = sh(script: "curl -s http://54.90.253.82", returnStdout: true).trim()
+                    def output = sh(script: "curl -s http://56.228.31.88", returnStdout: true).trim()
 
                     if (!output.contains("Harika")) {
                         error("Webserver validation failed!")
